@@ -1,0 +1,55 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "Kedro Training",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "kedro",
+            "args": ["run", "--env=base", "--pipeline=training"],
+            "justMyCode": false
+        },
+        {
+            "name": "Kedro Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "module": "kedro",
+            "args": ["run", "--env=base", "--pipeline=predict", "--params=ft_1:3,ft_2:5"],
+            "justMyCode": false
+        },
+        {
+            "name": "Run Pipeline Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "src/linear_regression/run_pipeline.py",
+            "args": ["predict", "base", "{\"ft_1\":3, \"ft_2\":5}"],
+            "env": {"PYTHONPATH": "${workspaceFolder}/src${pathSeparator}${env:PYTHONPATH}"},
+            "justMyCode": false
+        },
+        {
+            "name": "Run API Pipeline Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "src/linear_regression/run_api_pipeline.py",
+            "args": ["{\"ft_1\":3, \"ft_2\":5}"],
+            "env": {"PYTHONPATH": "${workspaceFolder}/src${pathSeparator}${env:PYTHONPATH}"},
+            "justMyCode": false
+        },              
+        {
+            "name": "Run Test API Pipeline Predict",
+            "type": "python",
+            "request": "launch",
+            "console": "integratedTerminal",
+            "program": "src/tests/pipelines/predict/test_pipeline.py",
+            "env": {"PYTHONPATH": "${workspaceFolder}/src${pathSeparator}${env:PYTHONPATH}"},
+            "justMyCode": false
+        }                      
+    ]
+}
