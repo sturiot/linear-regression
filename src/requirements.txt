@@ -6,6 +6,7 @@ isort~=5.0
 jupyter~=1.0
 jupyterlab~=3.0
 kedro~=0.18.3
+kedro-docker==0.3.0
 kedro-telemetry~=0.2.0
 nbstripout~=0.4
 numpy~=1.23.3

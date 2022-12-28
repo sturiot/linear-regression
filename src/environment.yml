@@ -12,4 +12,5 @@ dependencies:
   - scipy~=1.9.1
   - pip:
     - kedro==0.18.3
+    - kedro-docker==0.3.0
     - seldon-core==1.14.1
