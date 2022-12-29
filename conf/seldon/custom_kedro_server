@@ -2,7 +2,7 @@
   "CUSTOM_KEDRO_SERVER": {
     "rest": {
       "defaultImageVersion": "1.0.0",
-      "image": "st_org/custom-kedro-server-rest"
+      "image": "st/custom-kedro-server-rest"
     }
   }
 }
