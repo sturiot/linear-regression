@@ -1,0 +1,9 @@
+{
+  "LINEAR_REGRESSION_SERVER": {
+    "protocols": {
+      "seldon": {
+        "defaultImageVersion":"1.0.0","image":"st/linear-regression"
+      }
+    }
+  }
+}
