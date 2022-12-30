@@ -2,7 +2,7 @@
   "LINEAR_REGRESSION_SERVER": {
     "protocols": {
       "seldon": {
-        "defaultImageVersion":"1.0.0","image":"st/linear-regression"
+        "defaultImageVersion":"linear-regression-v1.0.1","image":"sturiot/sturiotio"
       }
     }
   }
