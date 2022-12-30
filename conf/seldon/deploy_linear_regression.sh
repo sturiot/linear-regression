@@ -24,6 +24,6 @@ spec:
       name: linear-regression-pipeline-predict
       type: MODEL
     name: linear-regression-pipeline-predictor
-    replicas: 0
+    replicas: 1
 
 END
