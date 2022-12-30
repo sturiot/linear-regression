@@ -2,7 +2,6 @@ import logging
 import json
 import pickle
 import seldon_core
-from seldon_core.user_model import SeldonComponent
 from kedro.framework.project import configure_project
 from kedro.framework.session import KedroSession
 from typing import Any, Dict
@@ -10,19 +9,19 @@ from typing import Any, Dict
 logger = logging.getLogger(__name__)
 
 
-class LinearRegression(SeldonComponent):
+class LinearRegression(object):
     """
     Model template. You can load your model parameters in __init__ from a location accessible at runtime
     """
 
-    def __init__(self, model_uri: str = None, env: str = None):
+    def __init__(self):
         """
         Add any initialization parameters. These will be passed at runtime from the graph definition parameters defined in your seldondeployment kubernetes resource manifest.
         """
         logger.info("Initializing")
         self.project_name = 'linear_regression'
         self.pipeline_name = 'predict'
-        self.env = env
+        self.env = None
         configure_project(self.project_name)
         self._load_model()
         logger.info("Initialized")
